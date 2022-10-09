@@ -2,9 +2,10 @@
 
 # API 接入文档
 
-- 安全稳定，秒级到账，钱包扫码，一键付款，方便快捷，匿名性强，突破微信、支付宝收款壁垒，快速打通交易闭环！
+- 安全稳定，秒级到账，钱包扫码，一键付款，免费使用，方便快捷，匿名性强，突破微信、支付宝收款壁垒，快速打通交易闭环！
 
 
 
-[GitHub](<https://github.com/Q-Angelo/Nodejs-Roadmap>)
+[GitHub](<https://github.com/usoppz/dPay>)
 [开始阅读](README.md)
+
