@@ -27,7 +27,7 @@ POST notify_url（商户在订单创建接口中指定）
 
 `signature` 的生成规则为：`toLowerCase(md5(transaction_token + order_id + amount + currency + coin_code + coin_amount + hash + private key))`。
 
-## [#](https://doc.tronapi.com/api/transaction/notify.html#通知示例)通知示例
+## 通知示例
 
 ```json
 {
