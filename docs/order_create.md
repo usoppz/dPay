@@ -36,7 +36,9 @@ POST https://pro.dpay.com/v1/api/order/create
 toHex(sign(signAlgorithm,privateKey,signData))
 ```
 signAlgorithm : 签名算法固定为 MD5withRSA 
+
 privateKey : RSA私钥，从商户后台获取（<font color=red>注：不要泄露给他人</font>）
+
 signData :  
 
 ```
@@ -69,7 +71,9 @@ verify(sign(signAlgorithm,signature,publicKey,signData))
 ```
 
 signAlgorithm : 签名算法固定为 MD5withRSA 
+
 publicKey : 官方平台RSA公钥，从返回数据中获取
+
 signData :  
 
 ```
