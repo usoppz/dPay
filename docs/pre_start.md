@@ -15,10 +15,11 @@
 
 **说明**
 
-你也可以直接参考 [Demo](https://github.com/usoppz/dPay)，快速接入我们的接口服务。
+你也可以直接参考 [Demo](https://github.com/usoppz/dPayDemo-java)，快速接入我们的接口服务。
 
 ## 遇到问题
 
 如你在接入过程中遇到任何问题，请优先阅读我们的 常见问题 文档。你还可以：
 
 通过电报和我们取得联系。联系电报: [@dpayz](https://t.me/dpayz)。
+
