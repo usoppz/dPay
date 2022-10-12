@@ -35,14 +35,13 @@ POST https://pro.dpay.com/v1/api/order/create
 ```
 toHex(sign(signAlgorithm,privateKey,signData))
 ```
-signAlgorithm : 签名算法固定为 MD5withRSA 
-
-privateKey : RSA私钥，从商户后台获取（<font color=red>注：不要泄露给他人</font>）
-
-signData :  
+- signAlgorithm : 签名算法固定为 MD5withRSA 
+- privateKey : RSA私钥，从商户后台获取（<font color=red>注：不要泄露给他人</font>）
+- signData :  签名数据，组装顺序严格按照该顺序组装
 
 ```
-orderNo + amount + network + symbol + currency + returnUrl + notifyUrl + customerNo + /n productName //组装顺序严格按照该顺序连接，服务端会根据该顺序进行验签
+orderNo + amount + network + symbol + currency + returnUrl + notifyUrl + 
+customerNo + productName
 ```
 
 
@@ -70,15 +69,14 @@ orderNo + amount + network + symbol + currency + returnUrl + notifyUrl + custome
 verify(sign(signAlgorithm,signature,publicKey,signData))
 ```
 
-signAlgorithm : 签名算法固定为 MD5withRSA 
-
-publicKey : 官方平台RSA公钥，从返回数据中获取
-
-signData :  
+- signAlgorithm : 签名算法固定为 MD5withRSA 
+- signature：dPay 签名串，返回数据中获取
+- publicKey : 官方平台RSA公钥，从返回数据中获取
+- signData :  验签数据，组装顺序严格按照该顺序组装
 
 ```
-orderNo + amount + tradeAmt + currency + symbol + usefulTime + address + imageStr + /n
-cashierUrl //组装顺序严格按照该顺序连接，dPay服务端签名顺序
+orderNo + amount + tradeAmt + currency + symbol + usefulTime + address +
+imageStr + cashierUrl 
 ```
 
 说明

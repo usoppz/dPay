@@ -11,3 +11,9 @@
 - 优势3：便捷快速的API接入方式以及超强的用户体验，支持钱包扫码，一键付款；
 - 优势4：全程匿名，一次对接，全球收款，天然匿名，拒绝追踪；
 - 优势5：全网最低的收费，对的，你没看错，全网最低，因为我们目前全部免费。
+
+
+## 如何联系我们 ?
+
+> 电报: [@dpayz](https://t.me/dpayz) <br>
+> 邮箱: <a href="mailto:usoppz.yy@gmail.com" target="_blank">usoppz.yy@gmail.com</a>
