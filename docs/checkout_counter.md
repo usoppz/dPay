@@ -30,7 +30,7 @@
 
 > 电脑端
 
-<img src="/Users/alex/myDoc/dPay/docs/images/image-20221014111406901.png" alt="image-20221014111406901" style="zoom: 50%;" />
+<img src="images/image-20221014111406901.png" alt="image-20221014111406901" style="zoom: 50%;" />
 
 
 
