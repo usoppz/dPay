@@ -10,7 +10,7 @@
 
 ## 密钥
 
-接口文档中提到的 `public key` & `private key`，都是指商户 `public key` & `private key`，可在商户后台 -> 设置 密钥信息栏查看。
+接口文档中提到的 `publicKey` & `privateKey`，都是指平台公钥`publicKey`  & 商户私钥 `privateKey`，可在商户后台  设置 -> 平台公钥 和 设置 -> 商户密钥 栏查看。
 
 公钥、私钥是通过RSA算法获取的一对Base64字符串，两者需配合使用。用`private key`  进行数据签名，通过`public key`进行数据验签。
 

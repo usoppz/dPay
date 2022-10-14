@@ -7,7 +7,7 @@
 欢迎阅读 `dPay API` 技术接入文档。在开始接入之前，你需要：
 
 1. 访问并登录 [商户后台](https://github.com/usoppz/dPay)。
-2. 在商户后台查看技术接入必需的 `public key` & `private key`。
+2. 在商户后台查看技术接入必需的 `publicKey` & `privateKey`。
 3. 在商户后台配置你的 `收款地址`。
 4. 阅读我们 [接口约定](https://usoppz.github.io/dPay/#/interface_desc) 及 [安全说明](https://usoppz.github.io/dPay/#/security_desc) 相关的内容。
 

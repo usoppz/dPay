@@ -16,14 +16,14 @@ POST https://pro.dpay.com/v1/api/order/create
 
 | 参数名      | 含义               | 验证 | 类型        | 说明                                                         |
 | :---------- | :----------------- | :--- | :---------- | :----------------------------------------------------------- |
-| publicKey   | RSA 公钥           | 必填 | string(300) | 商户RSA公钥，从商户后台获取。                                |
+| appId       | 商户应用ID         | 必填 | string(40)  | 商户应用ID，从商户后台 设置->平台公钥 中获取。               |
 | orderNo     | 商户端订单号       | 必填 | string(60)  | 系统在通知商户接口时，会带上这个参数。例：SO201710192541。   |
-| amount      | 订单金额           | 必填 | Double      | 精确到小数点后4位。                                          |
+| amount      | 订单金额           | 必填 | double      | 精确到小数点后2位。                                          |
 | currency    | 订单币种           | 必填 | string(8)   | 订单币种单位。支持：`CNY`、`USD`。                           |
 | symbol      | 支付币种           | 必填 | string(16)  | 订单支付币种。当前固定为 `USDT`。                            |
-| network     | 主网络             | 必填 | string(20)  | 支付币种所使用的主网络，当前固定为 TRC20                     |
-| notifyUrl   | 完成后回调通知地址 | 选填 | string(255) | 1. 用户支付完成后，系统会发送一个 `post` 消息到这个地址。 2. 该参数不需要 `urlencode`。例如：http://www.demo.com/pay_notify。 3. 商户也可统一在后台对该参数进行配置。 |
-| returnUrl   | 完成后同步跳转地址 | 选填 | string(255) | 1. 用户支付完成后，系统会自动跳转到这个地址。 2. 该参数不要 `urlencode`。例如：https://www.demo.com/pay_return。 |
+| network     | 主网络             | 必填 | string(20)  | 支付币种所使用的主网络，当前固定为  `TRC20 `                 |
+| notifyUrl   | 完成后回调通知地址 | 选填 | string(255) | 1. 用户支付完成后，系统会发送一个 `post` 消息到这个地址。 2. 该参数不需要 `urlencode`。例如：http://www.demo.com/payNotify。 <br>3. 商户也可统一在后台对该参数进行配置。 |
+| returnUrl   | 完成后同步跳转地址 | 选填 | string(255) | 1. 用户支付完成后，系统会自动跳转到这个地址。<br> 2. 该参数不要 `urlencode`。例如：https://www.demo.com/payReturn。 |
 | customerNo  | 商户端用户编号     | 选填 | string(60)  | 可以为用户名，也可以为数据库中的用户编号。例：sss@gmail.com，xxx等。 |
 | productName | 商户端产品名称     | 选填 | string(60)  | 该参数会显示在官方收银台页面顶部，留空则显示默认值。         |
 | locale      | 收银台多语言       | 选填 | string(12)  | 该参数指定收银台多语言，支持：中文（zh-CN），英文（en-US），默认为中文。 |
@@ -36,12 +36,11 @@ POST https://pro.dpay.com/v1/api/order/create
 toHex(sign(signAlgorithm,privateKey,signData))
 ```
 - signAlgorithm : 签名算法固定为 MD5withRSA 
-- privateKey : RSA私钥，从商户后台获取（<font color=red>注：不要泄露给他人</font>）
+- privateKey : 商户RSA私钥，从商户后台 设置->**商户密钥** 中获取（<font color=red>注：不要轻易泄露给他人</font>）
 - signData :  签名数据，组装顺序严格按照该顺序组装
 
 ```
-orderNo + amount + network + symbol + currency + returnUrl + notifyUrl + 
-customerNo + productName
+orderNo + amount + network + symbol + currency + returnUrl + notifyUrl + customerNo + productName
 ```
 
 
@@ -50,15 +49,15 @@ customerNo + productName
 
 | 参数名     | 含义           | 类型        | 说明                                                         |
 | :--------- | :------------- | :---------- | :----------------------------------------------------------- |
-| orderNo    | 官方订单号     | string(32)  | 商户可使用该字段，调用 `订单查询` 接口，核实用户是否支付完成。 |
-| amount     | 订单金额       | Double      | 订单金额，原数据返回                                         |
+| orderNo    | 官方订单号     | string(32)  | 商户可使用该字段，在商户后台通过 `订单查询` 功能，核实用户是否支付完成。 |
+| amount     | 订单金额       | double      | 订单金额，原数据返回                                         |
 | currency   | 订单币种       | string(8)   | 订单币种，原数据返回                                         |
 | symbol     | 订单支付币种   | string(16)  | 支付币种，原数据返回                                         |
-| tradeAmt   | 订单支付金额   | Double      | 支付金额，由 `订单金额` + `订单币种` 按照 `USDT.TRC20` 实时行情转换而来。 |
+| tradeAmt   | 订单支付金额   | double      | 支付金额，精确到小数点后4为，由 `订单金额` + `订单币种` 按照 `USDT.TRC20` 实时行情转换而来。 |
 | address    | 订单收款地址   | string(64)  | 商户配置的接收用户支付的钱包地址。                           |
 | cashierUrl | 官方收银台地址 | string(256) | 官方收银台 `url` 地址，商户可直接跳转到该地址供用户支付。    |
-| imageStr   | 收款码         | string      | 供钱包扫码支付的二维码 图片base64字符串格式。                |
-| usefulTime | 订单过期时间   | Date        | 订单过期时间。                                               |
+| qrcodeUrl  | 收款码地址     | string      | 商户配置的接收用户支付的钱包地址二维码图片地址。             |
+| usefulTime | 订单过期时间   | long        | 订单过期时间。格式：对应的全 `时间戳 `                       |
 | signature  | 签名串         | string(300) | 安全校验签名串。                                             |
 
 说明
@@ -71,12 +70,11 @@ verify(sign(signAlgorithm,signature,publicKey,signData))
 
 - signAlgorithm : 签名算法固定为 MD5withRSA 
 - signature：dPay 签名串，返回数据中获取
-- publicKey : 官方平台RSA公钥，从返回数据中获取
+- publicKey : 官方平台公钥，从商户后台 设置 ->**平台公钥** 中获取
 - signData :  验签数据，组装顺序严格按照该顺序组装
 
 ```
-orderNo + amount + tradeAmt + currency + symbol + usefulTime + address +
-imageStr + cashierUrl 
+appId + orderNo + amount + tradeAmt + currency + symbol + usefulTime + address + qrcodeUrl + cashierUrl 
 ```
 
 说明
@@ -89,19 +87,20 @@ imageStr + cashierUrl
 
 ```json
 {
-  "code": 200,
-  "data": {
-      "orderNo": "80841278ad144a54a70d443c1354f7c1",
-      "amount": "100.00",
-      "currency": "CNY",
-      "symbol": "USDT",
-      "tradeAmt": "15.66",
-      "address": "TNN47tpcWKoNYuWGKEGMPdW653ZFSnDsy9",
-      "qrcodeUrl": "https://pro.dPay.com/api/transaction/qrcode?token=80841278ad144a54a70d443c1354f7c1",
-      "cashierUrl": "https://pro.dPay.com/v1/api/order/pay?orderNo=80841278ad144a54a70d443c1354f7c1",
-      "signature": "49acae00de1a6e003e2010a5563249db",
-      "usefulTime": 1800,
-  },
-  "success": true
+    "success": true,
+    "code": 200,
+    "msg": "SUCCESS",
+    "data": {
+        "orderNo": "POC712A9647CD2431F8FF3068C8AE1F907",
+        "amount": 10,
+        "tradeAmt": 9.9993,
+        "currency": "usd",
+        "symbol": "usdt",
+        "usefulTime": 1665736446000,
+        "address": "TW4FVhVqxeCUUZXM2aWKK62YJGNpqrfgGE",
+        "qrcodeUrl": "http://pro.dPay.com/v1/api/order/qrcode?orderNo=POC712A9647CD2431F8FF3068C8AE1F907",
+        "cashierUrl": "http://pro.dPay.com/v1/api/order/pay?orderNo=POC712A9647CD2431F8FF3068C8AE1F907",
+        "signature": "874e8636425bb2f03b0c05ab0b280b9ea35ca25bb4942dcad650a51c0e953a80a3e49b317a51a9875b7af606acda5e607decdbaed3700673de3fed09b569854c0723fc279b4d227bd7241cc61f277b4a193846b9edbaeffd1f19244d30f6ef4e49be98b46df20cf396927073336987e34dd01a68baa837bf9a15239d160507e7"
+    }
 }
 ```

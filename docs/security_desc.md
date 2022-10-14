@@ -4,7 +4,7 @@
 
 ## 密钥
 
-商户的 `public key` 和 `private key` 非常重要，请勿将private key显示在任何网页代码、网址参数中。
+商户的 `publicKey` 和 `privateKey` 非常重要，请勿将其显示在任何网页代码、网址参数中。
 
 
 
