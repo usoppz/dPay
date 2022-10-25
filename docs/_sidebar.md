@@ -12,11 +12,13 @@
       	* [官方收银台](/checkout_counter.md)
       	* [订单通知](/order_notify.md)
       * 收款地址
-        * [收款地址查询](/developing.md)
-        * [收款地址配置](/developing.md)
-        * [收款地址生成](/developing.md)
-        * [收款地址生成 & 配置](/developing.md)
+        * [收款地址查询](/address_list.md)
+        * [收款地址生成](/address_generate.md)
+        * [收款地址配置](/address_config.md)
+        * [收款地址启用|禁用](/address_disabled.md)
+        * [收款地址生成&配置](/address_generate_config.md)
   * 资源
       * [接入工具](/developing.md)
       * [常见问题](/developing.md)
       * [升级说明](/developing.md)
+

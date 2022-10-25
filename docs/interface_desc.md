@@ -8,13 +8,9 @@
 
 
 
-## 密钥
+## appId
 
-接口文档中提到的 `publicKey` & `privateKey`，都是指平台公钥`publicKey`  & 商户私钥 `privateKey`，可在商户后台  设置 -> 平台公钥 和 设置 -> 商户密钥 栏查看。
-
-公钥、私钥是通过RSA算法获取的一对Base64字符串，两者需配合使用。用`private key`  进行数据签名，通过`public key`进行数据验签。
-
-<img src="images/image-20221007174343110.png" alt="image-20221007174343110" style="zoom: 33%;" />
+商户应用ID，用于确认商户唯一身份，从商户后台 设置->平台公钥 中获取。
 
 ## 字段选填
 
@@ -47,5 +43,5 @@
 
 
 
-<font color=red>**注：toHex(data) 表示将签名后的数据转换为16进制字符串 。具体实现可以参考dPay demo. <br>&nbsp;&nbsp;&nbsp;&nbsp;   privateKey 由商户从平台获取后由自身保管，且不可泄露给他人！！**</font>
+<font color=red>**注：`toHex(data)` 表示将签名后的数据转换为16进制字符串 。具体实现可以参考[dPay demo](https://github.com/usoppz/dPayDemo-java). <br>&nbsp;&nbsp;&nbsp;&nbsp;   `privateKey` 由商户从平台获取后由自身保管，且不可泄露给他人！！**</font>
 

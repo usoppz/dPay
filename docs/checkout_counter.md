@@ -15,8 +15,8 @@
         "symbol": "usdt",
         "usefulTime": 1665736446000,
         "address": "TW4FVhVqxeCUUZXM2aWKK62YJGNpqrfgGE",
-        "qrcodeUrl": "http://pro.dPay.com/v1/api/order/qrcode?	  orderNo=POC712A9647CD2431F8FF3068C8AE1F907",
-        "cashierUrl": "http://pro.dPay.com/v1/api/order/pay?orderNo=POC712A9647CD2431F8FF3068C8AE1F907",
+        "qrcodeUrl": "https://dpaycoin.com/v1/api/order/qrcode?	  orderNo=POC712A9647CD2431F8FF3068C8AE1F907",
+        "cashierUrl": "https://dpaycoin.com/v1/api/order/pay?orderNo=POC712A9647CD2431F8FF3068C8AE1F907",
         "signature": "874e8636425bb2f03b0c05ab0b280b9ea35ca25bb4942dcad650a51c0e953a80a3e49b317a51a9875b7af606acda5e607decdbaed3700673de3fed09b569854c0723fc279b4d227bd7241cc61f277b4a193846b9edbaeffd1f19244d30f6ef4e49be98b46df20cf396927073336987e34dd01a68baa837bf9a15239d160507e7"
     }
 }

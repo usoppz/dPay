@@ -7,7 +7,7 @@
 ## 接口地址
 
 ```bash
-POST https://pro.dpay.com/v1/api/order/create
+POST https://dpaycoin.com/v1/api/order/create
 ```
 
 
@@ -54,7 +54,7 @@ orderNo + amount + network + symbol + currency + returnUrl + notifyUrl + custome
 | currency   | 订单币种       | string(8)   | 订单币种，原数据返回                                         |
 | symbol     | 订单支付币种   | string(16)  | 支付币种，原数据返回                                         |
 | tradeAmt   | 订单支付金额   | double      | 支付金额，精确到小数点后4为，由 `订单金额` + `订单币种` 按照 `USDT.TRC20` 实时行情转换而来。 |
-| address    | 订单收款地址   | string(64)  | 商户配置的接收用户支付的钱包地址。                           |
+| address    | 订单收款地址   | string(38)  | 商户配置的接收用户支付的钱包地址。                           |
 | cashierUrl | 官方收银台地址 | string(256) | 官方收银台 `url` 地址，商户可直接跳转到该地址供用户支付。    |
 | qrcodeUrl  | 收款码地址     | string      | 商户配置的接收用户支付的钱包地址二维码图片地址。             |
 | usefulTime | 订单过期时间   | long        | 订单过期时间。格式：对应的全 `时间戳 `                       |
@@ -98,8 +98,8 @@ appId + orderNo + amount + tradeAmt + currency + symbol + usefulTime + address +
         "symbol": "usdt",
         "usefulTime": 1665736446000,
         "address": "TW4FVhVqxeCUUZXM2aWKK62YJGNpqrfgGE",
-        "qrcodeUrl": "http://pro.dPay.com/v1/api/order/qrcode?orderNo=POC712A9647CD2431F8FF3068C8AE1F907",
-        "cashierUrl": "http://pro.dPay.com/v1/api/order/pay?orderNo=POC712A9647CD2431F8FF3068C8AE1F907",
+        "qrcodeUrl": "https://dpaycoin.com/v1/api/order/qrcode?orderNo=POC712A9647CD2431F8FF3068C8AE1F907",
+        "cashierUrl": "https://dpaycoin.com/v1/api/order/pay?orderNo=POC712A9647CD2431F8FF3068C8AE1F907",
         "signature": "874e8636425bb2f03b0c05ab0b280b9ea35ca25bb4942dcad650a51c0e953a80a3e49b317a51a9875b7af606acda5e607decdbaed3700673de3fed09b569854c0723fc279b4d227bd7241cc61f277b4a193846b9edbaeffd1f19244d30f6ef4e49be98b46df20cf396927073336987e34dd01a68baa837bf9a15239d160507e7"
     }
 }
