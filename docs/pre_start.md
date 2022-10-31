@@ -6,7 +6,7 @@
 
 欢迎阅读 `dPay API` 技术接入文档。在开始接入之前，你需要：
 
-1. 访问并登录 [商户后台](https://github.com/usoppz/dPay)。
+1. 访问并登录 [商户后台](https://dpaycoin.com/login.html)。
 
 2. 在商户后台分别查看技术接入必需的平台公钥、商户私钥以及appId：
 

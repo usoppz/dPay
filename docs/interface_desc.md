@@ -29,9 +29,7 @@
 
 如某个接口需要提交数据 `orderNo`、 `amount`两个字段，且 :
 
-`privateKey` = `*********`（privateKey 由商户保管，且不可泄露给第三者）
-
-`orderNo` = `PO82C7`，`amount` =  `100`。
+`privateKey` = `******`（privateKey 由商户保管，且无泄露给第三者）,`orderNo` = `PO82C7`，`amount` =  `100`。
 
 根据 `signature` 的生成规则：
 

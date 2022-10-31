@@ -6,6 +6,6 @@
 
 
 
-[GitHub](<https://github.com/usoppz/dPay>)
+[dPay官网](<https://os.dpaycoin.com>)
 [开始阅读](README.md)
 
