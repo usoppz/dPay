@@ -18,7 +18,7 @@
         * [收款地址启用|禁用](/address_disabled.md)
         * [收款地址生成&配置](/address_generate_config.md)
   * 资源
-      * [接入工具](/developing.md)
-      * [常见问题](/developing.md)
-      * [升级说明](/developing.md)
+      * [接入工具](/tools.md)
+      * [常见问题](/faq.md)
+      * [升级说明](/logs.md)
 
