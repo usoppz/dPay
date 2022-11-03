@@ -7,7 +7,7 @@
 ## 接口地址
 
 ```bash
-POST https://dpaycoin.com/v1/api/order/create
+POST https://dpaycoin.com/api/order/create
 ```
 
 

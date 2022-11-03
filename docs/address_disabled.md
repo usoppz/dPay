@@ -5,7 +5,7 @@
 ## 接口地址
 
 ```bash
-GET https://dpaycoin.com/v1/api/address/disabled
+GET https://dpaycoin.com/api/address/disabled
 ```
 
 ## 接口参数
@@ -42,6 +42,7 @@ appId + address + status
 {
     "success": true,
     "code": 200,
-    "msg": "SUCCESS"
+    "msg": "SUCCESS",
+    "data": null
 }
 ```
