@@ -6,7 +6,9 @@
 
 数据编码统一为 `utf-8`。
 
+## Content-Type
 
+接口contentType统一为 rest `application/json`。
 
 ## appId
 
@@ -16,8 +18,6 @@
 
 
 对于接口参数标记为 选填 的字段，可传入具体的值或者空字符串。
-
-
 
 ## signature
 

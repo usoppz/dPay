@@ -7,7 +7,7 @@
 ## 接口地址
 
 ```bash
-GET https://dpaycoin.com/api/address/generateAndConfig
+POST https://dpaycoin.com/api/address/generateAndConfig
 ```
 
 ## 接口参数

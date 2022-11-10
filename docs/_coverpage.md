@@ -6,6 +6,6 @@
 
 
 
-[dPay官网](<https://os.dpaycoin.com>)
+[商户登陆](<https://dpaycoin.com/login.html>)
 [开始阅读](README.md)
 
