@@ -17,3 +17,7 @@
 
 > 电报: [@dpayz](https://t.me/dpayz) <br>
 > 邮箱: <a href="mailto:usoppz.yy@gmail.com" target="_blank">usoppz.yy@gmail.com</a>
+
+## 商务合作
+
+> 如需商务合作，请通过上述联系方式与我们商务人员进行洽谈！
