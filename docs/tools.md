@@ -6,7 +6,7 @@
 
 https://dpaycoin.com/swagger-ui.html  swagger地址
 
-<img src="/Users/alex/myDoc/dPay/docs/images/:Users:alex:Library:Application Support:typora-user-images:image-20221207111147873.png" alt="image-20221207111147873" style="zoom:80%;" />
+<img src="images/swagger.png" alt="image-20221207111147873" style="zoom:80%;" />
 
 ## java 接入Demo
 
