@@ -1,6 +1,8 @@
 # 订单创建
 
 > 用于生成 `USDT.TRC20` 的支付数据。商户可选择直接跳转至 `官方收银台` 供用户支付，也可以使用数据 `自定义收银台`。在用户支付成功后，系统将即时进行 `回调通知`。
+>
+> 订单类型主要分为：无需归集订单，需要归集订单两种类型。
 
 
 
@@ -22,6 +24,7 @@ POST https://dpaycoin.com/api/order/create
 | currency    | 订单币种           | 必填 | string(8)   | 订单币种单位。支持：`CNY`、`USD`。                           |
 | symbol      | 支付币种           | 必填 | string(16)  | 订单支付币种。当前固定为 `USDT`。                            |
 | network     | 主网络             | 必填 | string(20)  | 支付币种所使用的主网络，当前固定为  `TRC20 `                 |
+| orderType     | 订单类型         | 必填 | int | 订单类型 1.无归集订单，2.需归集订单                |
 | notifyUrl   | 完成后回调通知地址 | 选填 | string(255) | 1. 用户支付完成后，系统会发送一个 `post` 消息到这个地址。 2. 该参数不需要 `urlencode`。例如：http://www.demo.com/payNotify。 <br>3. 商户也可统一在后台对该参数进行配置。 |
 | returnUrl   | 完成后同步跳转地址 | 选填 | string(255) | 1. 用户支付完成后，系统会自动跳转到这个地址。<br> 2. 该参数不要 `urlencode`。例如：https://www.demo.com/payReturn。 |
 | customerNo  | 商户端用户编号     | 选填 | string(60)  | 可以为用户名，也可以为数据库中的用户编号。例：sss@gmail.com，xxx等。 |
