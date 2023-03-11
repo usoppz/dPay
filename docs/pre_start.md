@@ -47,7 +47,7 @@
    ```
    gradle配置：
 
-   ```java
+   ```apl
    implementation 'com.dpaycoin:dPay-SDK:1.0'
    ```
 
