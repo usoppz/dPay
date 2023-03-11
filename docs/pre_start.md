@@ -20,7 +20,7 @@
 
 ### 代码接入（Java）
 
-1. 新增配置文件<u>config.properties</u>，并加入如下内容：
+1. 新增配置文件 <u>config.properties</u>，并加入如下内容：
 
    ```properties
    host =https://dpaycoin.com
@@ -32,7 +32,7 @@
    appId =4c1fe739-54f9-44f3-bba8-c334a4541a7b  ## 前期准备 步骤2 获取到的appId
    ```
 
-2. 通过下载SDK源码自行打包后引入jar包，或者直接通过maven配置直接引入
+2. 通过下载SDK源码自行打包后引入jar包，或者直接通过maven、gradle 配置直接引入
 
    SDK源码下载地址：[https://github.com/usoppz/dPay-SDK](https://github.com/usoppz/dPay-SDK)
 
@@ -45,6 +45,13 @@
      <version>1.0</version>
    </dependency>
    ```
+   gradle配置：
+
+   ```java
+   implementation 'com.dpaycoin:dPay-SDK:1.0'
+   ```
+
+   
 
 3. 编写代码，下面代码以创建订单为例：
 
@@ -78,11 +85,9 @@
 
    
 
-4. 其他接口使用可以参考  [Demo](https://github.com/usoppz/dPayDemo-java)  或者每个接口的文档说明。
-
 **说明**
 
-你也可以直接参考 [Demo](https://github.com/usoppz/dPayDemo-java)，快速接入我们的API服务。
+其他接口你也可以直接参考 [Demo](https://github.com/usoppz/dPayDemo-java)，快速接入我们的API服务。
 
 ## 遇到问题
 
