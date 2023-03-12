@@ -14,7 +14,7 @@
 
     `publicKey` & `privateKey` & `appId`。
 
-3. 在商户后台配置你的 `收款地址` （也可以通过API接口方式配置）。
+3. 如果是创建无需归集订单需要在商户后台配置你的 `收款地址` （也可以通过API接口方式配置）。
 
 4. 阅读我们 [接口约定](https://usoppz.github.io/dPay/#/interface_desc) 及 [安全说明](https://usoppz.github.io/dPay/#/security_desc) 相关的内容。
 

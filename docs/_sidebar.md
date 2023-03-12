@@ -11,7 +11,12 @@
       	* [订单创建](/order_create.md)
       	* [官方收银台](/checkout_counter.md)
       	* [订单通知](/order_notify.md)
-      * 收款地址
+      * 提现相关（归集订单）
+      	* [矿工费转账](/gas_transfer.md)
+      	* [订单归集](/order_gather.md)
+      	* [账户余额](/account_balance.md)
+      	* [账户提现](/withdraw.md)
+      * 收款地址（无归集订单）
         * [收款地址查询](/address_list.md)
         * [收款地址生成](/address_generate.md)
         * [收款地址配置](/address_config.md)

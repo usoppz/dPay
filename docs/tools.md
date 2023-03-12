@@ -15,7 +15,9 @@ https://dpaycoin.com/swagger-ui.html  swagger地址
 ## java-SDK
 [https://github.com/usoppz/dPay-SDK](https://github.com/usoppz/dPay-SDK)
 
-可以通过下载SDK自行编译后，引入`jar` 包。也可以通过maven方式直接引入：
+可以通过下载SDK自行编译后，引入`jar` 包。也可以通过maven 或者 gradle 方式直接引入：
+
+maven:
 
 ```xml
 <dependency>
@@ -23,5 +25,11 @@ https://dpaycoin.com/swagger-ui.html  swagger地址
   <artifactId>dPay-SDK</artifactId>
   <version>1.0</version>
 </dependency>
+```
+
+gradle:
+
+```apl
+implementation 'com.dpaycoin:dPay-SDK:1.0'
 ```
 
