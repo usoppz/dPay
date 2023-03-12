@@ -8,11 +8,11 @@
 
 2.点击`个人账户`，进入`个人账户`页面
 
-<img src="/Users/alex/myDoc/dPay/docs/images/image-20230312121450765.png" alt="image-20230312121450765" style="zoom:30%;" />
+<img src="images/image-20230312121450765.png" alt="image-20230312121450765" style="zoom:30%;" />
 
 3.`币种`下面展示的即为该账户的余额
 
-<img src="/Users/alex/myDoc/dPay/docs/images/image-20230312124714604.png" alt="image-20230312124714604" style="zoom:30%;" />
+<img src="images/image-20230312124714604.png" alt="image-20230312124714604" style="zoom:30%;" />
 
 
 
