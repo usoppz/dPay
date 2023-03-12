@@ -8,7 +8,7 @@
 
 2.点击`订单`菜单按钮，进入订单页面
 
-<img src="/Users/alex/myDoc/dPay/docs/images/image-20230312123352042.png" alt="image-20230312123352042" style="zoom:50%;" />
+<img src="images/image-20230312123352042.png" alt="image-20230312123352042" style="zoom:50%;" />
 
 3.点击 `一键归集` 进行订单归集操作
 
